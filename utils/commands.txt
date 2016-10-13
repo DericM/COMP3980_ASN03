@@ -1,0 +1,8 @@
+1) copy pscp to windows/system32 (so that its in a folder included in the PATH)
+
+
+2) example to copy a file:
+pscp C:\Users\knome\workspace\COMP3980_ASN02\dcgps.cpp pi@72.53.55.12:COMP3980_ASN02/
+
+
+3) user:pi password:raspberry
