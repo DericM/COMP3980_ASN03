@@ -1,6 +1,6 @@
-# Example Makefile 
+# Example Makefile
 
-CC=gcc -Wall 
+CC=gcc -Wall
 CLIB=-lgps
 
 dcgps: dcgps.o gps-utils.o gpsprint.o
@@ -9,8 +9,8 @@ dcgps: dcgps.o gps-utils.o gpsprint.o
 clean:
 	rm -f *.o core.* dcgps
 dcgps.o:
-	$(CC) -c dcgps.c 
-gps-utils.o: 
-	$(CC) -c gps-utils.c
+	$(CC) -c dcgps.cpp
+gps-utils.o:
+	$(CC) -c gps-utils.cpp
 gpsprint.o:
-	$(CC) -c gpsprint.c
+	$(CC) -c gpsprint.cpp
