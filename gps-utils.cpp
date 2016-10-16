@@ -18,12 +18,7 @@ void read(gpsmm& gps_rec){
             cerr << "Read error.\n";
             return;
         } else {
-			
 			printData(newdata);
-			//////////CALL to gpsprint.cpp
-            //PROCESS(newdata);
-			
-			////////////////////////////////////////////
         }
     }
 }

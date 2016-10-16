@@ -1,0 +1,16 @@
+sudo apt-get update
+sudo apt-get dist-upgrade
+sudo rpi-update
+sudo reboot
+
+
+sudo apt-get install scons libncurses5-dev python-dev pps-tools
+sudo apt-get install git-core
+
+
+
+sudo wget http://fossies.org/linux/misc/gpsd-3.16.tar.gz
+tar -zxvf gpsd-3.16.tar.gz
+
+scons && scons check && sudo scons udev-install
+

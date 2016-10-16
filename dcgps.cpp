@@ -2,7 +2,6 @@
 
 #include <gps.h>
 #include <libgpsmm.h>
-
 #include <iostream>
 #include <iomanip>
 
@@ -10,29 +9,18 @@
 #include "gpsprint.h"
 
 
-
-
-
-
 using namespace std;
 
 
 int main(){
-	
-	
-	gpsmm gps_rec("localhost", DEFAULT_GPSD_PORT);
+		
+	gpsmm gps_rec(LOCAL_HOST, DEFAULT_GPSD_PORT);
 
     if (gps_rec.stream(WATCH_ENABLE|WATCH_JSON) == NULL) {
         cerr << "No GPSD running.\n";
         return 1;
     }
-
-	
 	read(gps_rec);
 	
-	
-	
-	//cleanup
 	return 0;
-    
 }
