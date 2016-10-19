@@ -1,6 +1,6 @@
 # Example Makefile
 
-CC=g++ -Wall
+CC=g++ -std=c++11 -Wall -lpthread
 CLIB=-lgps
 
 dcgps: clean dcgps.o gps-utils.o gpsprint.o

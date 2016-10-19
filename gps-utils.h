@@ -42,7 +42,7 @@
 -- NOTES:
 -- This handles the various errors of the program and then safely exits.
 ----------------------------------------------------------------------------------------------------------------------*/
-void handle_error(int error_no){;
+void handle_error(int error_no);
 
 /*------------------------------------------------------------------------------------------------------------------
 -- FUNCTION: handle_error
@@ -63,6 +63,6 @@ void handle_error(int error_no){;
 -- This is a loop that will constantly try to read data from the GPSD port
 -- successful reads will print the data and errors will exit the program.
 ----------------------------------------------------------------------------------------------------------------------*/
-void read(gpsmm& gps_rec);
+void read(gpsmm* gps_rec);
 
 #endif

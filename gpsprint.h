@@ -44,4 +44,45 @@
 ----------------------------------------------------------------------------------------------------------------------*/
 void printData(struct gps_data_t *gpsdata);
 
+/*------------------------------------------------------------------------------------------------------------------
+-- FUNCTION: toRad()
+--
+-- DATE: October 18, 2016
+--
+-- REVISIONS: (Date and Description)
+--
+-- DESIGNER: Deric Mccadden, Jamie Lee
+--
+-- PROGRAMMER: Deric Mccadden, Jamie Lee
+--
+-- INTERFACE: toRad()
+--
+-- RETURNS: double.
+--
+-- NOTES:
+-- This function converts from degrees to radians.
+----------------------------------------------------------------------------------------------------------------------*/
+double toRad(double degree);
+
+/*------------------------------------------------------------------------------------------------------------------
+-- FUNCTION: calculateDistance()
+--
+-- DATE: October 18, 2016
+--
+-- REVISIONS: (Date and Description)
+--
+-- DESIGNER: Deric Mccadden, Jamie Lee
+--
+-- PROGRAMMER: Deric Mccadden, Jamie Lee
+--
+-- INTERFACE: calculateDistance()
+--
+-- RETURNS: double.
+--
+-- NOTES:
+-- This function calculates the distance
+----------------------------------------------------------------------------------------------------------------------*/
+double calculateDistance(double lat1, double long1, double lat2, double long2);
+
+
 #endif

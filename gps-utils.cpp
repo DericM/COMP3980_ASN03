@@ -28,6 +28,8 @@
 #include "gps-utils.h"
 #include "gpsprint.h"
 
+#define WAIT_GPS_TIMEOUT 50000000
+
 using namespace std;
 
 
@@ -93,16 +95,16 @@ void handle_error(int error_no){
 -- This is a loop that will constantly try to read data from the GPSD port
 -- successful reads will print the data and errors will exit the program.
 ----------------------------------------------------------------------------------------------------------------------*/
-void read(gpsmm& gps_rec){
+void read(gpsmm* gps_rec){
 	
 	for (;;) {
         struct gps_data_t* newdata;
 
-        if (!gps_rec.waiting(50000000))
+        if (!gps_rec->waiting(WAIT_GPS_TIMEOUT))
           handle_error(GPS_TIMEOUT);
 
 		errno = 0;
-        if ((newdata = gps_rec.read()) == NULL) {
+        if ((newdata = gps_rec->read()) == NULL) {
 			handle_error(errno==0 ? GPS_GONE:GPS_ERROR);
         } else {
 			printData(newdata);

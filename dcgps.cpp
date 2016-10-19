@@ -24,6 +24,7 @@
 #include <libgpsmm.h>
 #include <iostream>
 #include <iomanip>
+#include <thread>
 
 #include "gps-utils.h"
 #include "gpsprint.h"
@@ -58,7 +59,9 @@ int main(){
         cerr << "No GPSD running.\n";
         return 1;
     }
-	read(gps_rec);
+	
+	thread readThrd(read, &gps_rec);
+    readThrd.join();
 	
 	return 0;
 }
